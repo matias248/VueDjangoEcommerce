@@ -1,0 +1,47 @@
+
+### Get all stores
+GET http://127.0.0.1:8000/stores/2
+
+### Get all stores filtered by  a text
+GET http://127.0.0.1:8000/stores?textfilter=a
+
+### Get by id
+GET http://127.0.0.1:8000/stores
+
+### Create a store
+POST http://127.0.0.1:8000/stores/
+Content-Type: application/json
+
+{
+      "name": "Toulouse store3",
+      "currency": "EUR",
+      "address": {
+        "streetNumber": "0",
+        "streetName": "Street Name",
+        "city": "City",
+        "state": "State",
+        "zipCode": "31002"
+      },
+      "location": {
+        "latitude": 1,
+        "longitude": 2
+      },
+      "contactPhone": "+33 123456",
+      "imageUrl": "a"
+}
+
+### Update a store
+PATCH  http://127.0.0.1:8000/stores/2/
+Content-Type: application/json
+
+{
+      "name": "Toulouse a",
+      "currency": "EUR",
+      "contactPhone": "+33 123456",
+      "imageUrl": "a"
+}
+
+### Delete a store
+DELETE http://127.0.0.1:8000/stores/1/
+
+

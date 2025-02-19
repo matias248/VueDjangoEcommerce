@@ -1,0 +1,55 @@
+
+### Get all products with pagination
+GET http://127.0.0.1:8000/products
+
+### Get all products with store filter
+GET http://127.0.0.1:8000/products?categories=a,Accessories
+
+### Get all products with store filter
+GET http://127.0.0.1:8000/products?textfilter=watch
+
+### Get all products paginated
+GET http://127.0.0.1:8000/products?storeId=2
+####
+GET http://127.0.0.1:8000/products?page=1&pagelength=3
+
+### Get products by id
+GET http://127.0.0.1:8000/products/5
+
+### Create a product
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+
+{
+			"name": "a Watch",
+			"description": "Product Description",
+			"imageUrl": "bamboo-watch.jpg",
+			"price": 65,
+			"category": "Accessories",
+			"quantity": 24,
+			"inventoryStatus": "OUTOFSTOCK",
+			"rating": 5,
+			"currency":"€",
+			"storeId":3
+}
+
+### Update a product
+PATCH  http://127.0.0.1:8000/products/1/
+Content-Type: application/json
+
+{
+    "name":"name changed",
+	"price":89,
+	"store":2
+}
+
+### Delete a product
+DELETE http://127.0.0.1:8000/products/16/
+
+### Get products and store by store 
+GET http://127.0.0.1:8000/stores/2/products
+
+### Get product and store by id
+GET http://127.0.0.1:8000/stores/2/products/5
+
+
