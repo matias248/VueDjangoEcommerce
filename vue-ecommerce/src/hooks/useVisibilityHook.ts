@@ -1,7 +1,7 @@
 // useVisibility.js
 import { ref, onMounted, onUnmounted } from 'vue';
 
-const isVisibleInViewport = (element) => {
+const isVisibleInViewport = (element:any) => {
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&

@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import IconEc from './icons/IconEc.vue';
-import IconForms from './icons/IconForms.vue';
-import IconShop from './icons/IconShop.vue';
+
 
 defineProps<{
 }>()
