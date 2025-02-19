@@ -13,7 +13,8 @@ const crossFunction = () =>{
 const cartDataStore = useCartDataStore();
 const {cartDataMap} = storeToRefs(cartDataStore);
 const submitOrderFunction = () => {
-  submitButtonVisible.value = !submitButtonVisible.value;
+  if( cartDataMap.value.size > 0 )
+    submitButtonVisible.value = !submitButtonVisible.value;
 }
 </script>
 <template>

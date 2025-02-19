@@ -3,11 +3,14 @@ import { useCartDataStore } from '@/stores/CartData';
 import { vOnClickOutside } from '@vueuse/components'
 
 
-const isVisible = defineModel();
+const isVisible = defineModel('orderConfirmModal');
+const cartListVisible = defineModel('cartListVisible');
+
 
 const onClickCrossButtonFunction = (newValue:boolean) => {
     isVisible.value = newValue;
     cartDataStore.$reset();
+    cartListVisible.value = false;
 }
 const cartDataStore=useCartDataStore()
 

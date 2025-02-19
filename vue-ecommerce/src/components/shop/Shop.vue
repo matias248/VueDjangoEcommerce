@@ -76,7 +76,7 @@ watch(() => [categoriesSelected.value.length, textFilter.value,pageIndex.value,s
 </style>
 <template>
 <div class="pb-4">
-  <OrderConfirmModal v-if="orderConfirmModal" v-model="orderConfirmModal"/>
+  <OrderConfirmModal v-if="orderConfirmModal" v-model:orderConfirmModal="orderConfirmModal" v-model:cartListVisible="cartListVisible"/>
   <Transition name="slide-fade">
   <ShopCart v-if="cartListVisible" v-model:cartListVisible="cartListVisible" v-model:submitButtonVisible="orderConfirmModal"/>
   </Transition>
